@@ -1,0 +1,92 @@
+.view-container {
+    .filter-header {
+        .el-form {
+            .search-btn-group {
+                .el-form-item {
+                    button {
+                        width: 100px;
+                        @media screen and (min-width: 768px) and (max-width: 1366px) {
+                            width: 90px;  
+                        }
+                    }
+                }
+            }
+            .el-form-item {
+                margin-bottom: 15px;
+                input[type="text"] {
+                    width: 180px;                    
+                    @media screen and (min-width: 768px) and (max-width: 1366px) {
+                        width: 150px;  
+                    } 
+                }         
+            }
+        }
+    }
+}
+
+.view-form {
+    .el-form {
+        .el-form-item {
+            .el-input,.el-select {
+                width: 280px;
+            }
+            .image-tip {
+                width: 280px;
+                text-align: center;
+            }
+            .el-upload--picture-card {
+                width: 280px;
+                height: 200px;
+                .el-icon-plus {
+                    margin-top: 80px;
+                }
+                .img-hover {
+                    &:before {      
+                        width: 280px;
+                        height: 200px;           
+                        z-index: 5;
+                        position: absolute;
+                        color: #FFFFFF;
+                        cursor: pointer;
+                        font-size: 14px;
+                        line-height: 24px;
+                        letter-spacing: 1px;
+                        white-space: pre;
+//                      content: "点击放大预览图片\A\00A0\00A0\00A0双击删除图片";
+                        content: "点击重新选择";
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgba(0,0,0,0);
+                        transform: scaleY(0);
+                        transform-origin: 100% 0; 
+                        transition-property: all;
+                        transition-duration: 0.3s;
+                        transition-timing-function: ease-out;
+                    }
+                    &:hover:before {
+                        transform: scaleY(1);
+                        background-color: rgba(0,0,0,0.4)
+                    }
+                    .avatar-img {
+                        width: 280px;
+                        height: 198px;
+                        border-radius: 10px;
+                    }
+                } 
+            }
+            .el-upload-list--picture-card {
+                li.is-success,li.is-uploading {                        
+                    width: 280px;
+                    height: 200px;  
+                }
+            }
+            &.form-inline-layout {
+//              display: inline-block;
+            }
+//          .form-inline-layout + .el-form-item {
+//              
+//          }
+        }
+    }
+}
